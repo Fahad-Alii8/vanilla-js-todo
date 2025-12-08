@@ -17,3 +17,8 @@ const todos = [
     isCompleted: true,
   },
 ];
+todos.forEach((todo) => {
+  const li = document.createElement("li");
+  li.textContent = todo.task;
+  todoList.appendChild(li);
+});
