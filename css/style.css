@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Limits the size of the app */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+/* Form Styles */
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 20px 0;
+}
+
+/* Search Input Style */
+#search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; 
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding doesn't increase total width */
+  display: block; 
+}
+
+/* List Styles */
+#todo-list {
+  list-style: none; /* Removes default bullets */
+  padding: 0;
+}
+
+#todo-list li {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border-left: 5px solid #007bff;
+  font-size: 18px;
+  
+  /* Flexbox for text and delete button alignment */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+/* Style for the Delete Button */
+.delete-btn {
+  background: #ff4d4d; /* Red background for visibility */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px; /* Add space between text and button */
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1; 
+  transition: background-color 0.3s;
+  flex-shrink: 0; /* Prevents button from shrinking on small screens */
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Style for hidden items during search */
+.hide {
+  display: none;
+}
