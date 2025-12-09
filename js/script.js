@@ -19,11 +19,16 @@ const todos = [
   },
 ];
 
-todos.forEach((todo) => {
-  const li = document.createElement("li");
-  li.textContent = todo.task;
-  todoList.appendChild(li);
-});
+function renderList() {
+  todoList.innerHTML = '';
+  todos.forEach((todo) => {
+    const li = document.createElement("li");
+    li.textContent = todo.task;
+    todoList.appendChild(li);
+  });
+}
+
+renderList();
 
 todoForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -35,9 +40,7 @@ todoForm.addEventListener("submit", (event) => {
       isCompleted: false,
     };
     todos.push(newTodo);
-    const li = document.createElement("li");
-    li.textContent = newTodo.task;
-    todoList.append(li);
+    renderList();
     todoInput.value = "";
   } else {
     alert("Enter something");
