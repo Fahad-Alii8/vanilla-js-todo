@@ -7,7 +7,7 @@ const todoList = document.querySelector("#todo-list");
 const todos = [
   {
     task: "Learn JS",
-    isCompleted: true,
+    isCompleted: false,
   },
   {
     task: "Learn TS",
@@ -15,9 +15,10 @@ const todos = [
   },
   {
     task: "Degree Dispatched",
-    isCompleted: true,
+    isCompleted: false,
   },
 ];
+
 todos.forEach((todo) => {
   const li = document.createElement("li");
   li.textContent = todo.task;
@@ -31,9 +32,12 @@ todoForm.addEventListener("submit", (event) => {
   if (userInput) {
     const newTodo = {
       task: userInput,
-      isCompleted: true,
+      isCompleted: false,
     };
     todos.push(newTodo);
+    const li = document.createElement("li");
+    li.textContent = newTodo.task;
+    todoList.append(li);
     todoInput.value = "";
   } else {
     alert("Enter something");
