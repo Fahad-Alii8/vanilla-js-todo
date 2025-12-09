@@ -29,8 +29,12 @@ todoForm.addEventListener("submit", (event) => {
   const userInput = todoInput.value;
 
   if (userInput) {
-    console.log(userInput);
-    todoInput.value = '';
+    const newTodo = {
+      task: userInput,
+      isCompleted: true,
+    };
+    todos.push(newTodo);
+    todoInput.value = "";
   } else {
     alert("Enter something");
   }
